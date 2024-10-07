@@ -1,0 +1,103 @@
+$screen-size: 744px;
+
+.page {
+    margin: 0 auto;
+    padding: 40px 20px;
+
+    &__header {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+        margin-bottom: 24px;
+    }
+
+    &__title {
+        margin: 0;
+        font-size: 32px;
+
+        @media (max-width: $screen-size) {
+            font-size: 24px;
+        }
+    }
+
+    &__btn {
+        background-color: #FEAF00;
+        padding: 12px 24px;
+        border: none;
+        font-size: 14px;
+        font-weight: 200;
+        color: #fff;
+        text-transform: uppercase;
+        border-radius: 4px;
+        position: relative;
+        cursor: pointer;
+
+        @media (max-width: $screen-size) {
+            padding: 16px;
+        }
+
+        &:before {
+            content: "Добавить новость";
+
+            @media (max-width: $screen-size) {
+                content: "+";
+                position: absolute;
+                font-size: 24px;
+                line-height: 11px;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+        }
+    }
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+    @media (max-width: $screen-size) {
+        gap: 18px;
+    }
+
+    input, textarea {
+        border: 1px solid #E5E5E5;
+        border-radius: 8px;
+        padding: 9px 12px;
+        font-size: 14px;
+
+        @media (max-width: $screen-size) {
+            border-radius: 4px;
+        }
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    textarea {
+        height: 150px;
+    }
+
+    &__btn {
+        background-color: #FEAF00;
+        padding: 12px;
+        border: none;
+        font-size: 14px;
+        font-weight: 200;
+        color: #fff;
+        text-transform: uppercase;
+        border-radius: 4px;
+        width: 100%;
+        cursor: pointer;
+    }
+
+    &__err {
+        background-color: #f6bbcf;
+        padding: 4px 8px;
+        border-radius: 4px;
+    }
+}

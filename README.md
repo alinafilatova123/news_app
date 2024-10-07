@@ -1,1 +1,2 @@
-# news_app
+## Запустить: 
+`npm run dev`

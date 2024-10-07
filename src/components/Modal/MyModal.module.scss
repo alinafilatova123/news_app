@@ -1,0 +1,27 @@
+$screen-size: 744px;
+
+.modal {
+
+    &__title {
+        font-size: 24px;
+        margin: 0 0 24px;
+
+        @media (max-width: $screen-size) {
+            font-size: 18px;
+        }
+    }
+
+    &__close {
+        position: absolute;
+        top: 16px;
+        right: 16px;
+        cursor: pointer;
+        height: 16px;
+        width: 16px;
+
+        img {
+            height: 16px;
+            width: 16px;
+        }
+    }
+}
